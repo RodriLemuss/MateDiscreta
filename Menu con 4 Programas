@@ -1,0 +1,165 @@
+#include <iostream.h>
+#include <conio.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+
+int n,r,tp,tc,a,b,fact1,fact2,opc;//case1
+int fact3,c,restfact; //case2
+int term,total;       //case3
+int sn,rp1,rp2,rp3,rp4;          //case4
+char resp;
+resp = 's';
+
+
+while(resp =='s')
+
+
+{//WHILE
+clrscr();
+cout<<"   MENU PRINCIPLA "<<endl;
+cout<<"1. Permutacion"<<endl;
+cout<<"2. Combinaciones"<<endl;
+cout<<"3. Teorema del binomio"<<endl;
+cout<<"4. Secuencia recursiva"<<endl;
+cout<<"5. Esta en el otro programa"<<endl;
+cout<<"6. SALIR"<<endl;
+cout<<"Ingrese el numero de su opcion (1-6)"<<endl;
+cin>>opc;
+
+switch (opc)
+{//SWITCH
+//*****************************************************************
+
+case 1:{
+cout<<endl;
+cout<<"Ingrese n"<<endl;
+cin>>n;
+cout<<"Ingrese r"<<endl;
+cin>>r;
+fact1 =1;
+fact2= 1;
+
+
+for (a=1;a<=n;a++)
+{
+fact1=a*fact1;
+}
+	for (b=1; b<=r;b++)
+	{
+   	fact2=b*fact2;
+		}
+tp = fact1/fact2;
+cout<<"El resultado es: "<<tp<<endl;
+} ;break;
+//******************************************************************
+
+case 2: {
+cout<<endl;
+ cout<<"Ingrese n"<<endl;
+cin>>n;
+cout<<"Ingrese r"<<endl;
+cin>>r;
+
+fact1 =1;
+fact2= 1;
+
+for (a=1;a<=n;a++)
+{
+fact1=a*fact1;
+}
+	for (b=1; b<=r;b++)
+	{
+   	fact2=b*fact2;
+		}
+
+fact3 =1;
+restfact = n-r;
+
+for (c=1; c<=restfact; c++)
+{
+fact3 = c*fact3;
+}
+
+tc = fact1/(fact2*fact3);
+ cout<<"El resultado es:"<<tc<<endl;;
+};break;
+//*******************************************************************
+
+
+case 3: {
+cout<<endl;
+cout<<"Ingrese n"<<endl;
+cin>>n;
+cout<<"Ingrese termino a resolver,[X][Y]"<<endl;
+cin>>r>>term;
+
+
+fact1 =1;
+fact2= 1;
+
+for (a=1;a<=n;a++)
+{
+fact1=a*fact1;
+}
+	for (b=1; b<=term;b++)
+	{
+   	fact2=b*fact2;
+		}
+
+fact3 =1;
+restfact = n-term;
+
+for (c=1; c<=restfact; c++)
+{
+fact3 = c*fact3;
+}
+total = fact1/(fact2*fact3);
+ cout<<"El resultado del termino X^"<<r<<" Y^"<<term<<" es: ";
+ cout <<total<<" x^"<<r<<" y^"<<term<<endl;
+
+          };break;
+ //********************************************************************
+case 4: {
+    cout<<"La ecuacion es: (3(An-1)-11)"<<endl;
+ cout<<"Ingrese A1 "<<endl;
+ cin>>sn;
+ rp1=((3*sn)-11);
+ rp2=((3*rp1)-11);
+ rp3=((3*rp2)-11);
+ rp4=((3*rp3)-11);
+
+ cout<<"La primera secuencia es: "<<rp1<<endl;
+ cout<<"La segunda secuencia es: "<<rp2<<endl;
+ cout<<"La tercera secuencia es: "<<rp3<<endl;
+ cout<<"La cuarta secuencia es: "<<rp4<<endl;
+
+ };break;
+ //********************************************************************
+
+ case 5: {
+
+
+ };break;
+//*********************************************************************
+ case 6: {
+ 				exit(1);};break;
+
+default:cerr<<"OPCION NO VALIDA..."<<endl;
+
+
+}//SWITCH
+ cout<<"\n";
+
+ cout<<"Desea elegir otra opcion s/n:"<<endl;
+ cin>>resp;
+
+
+}//WHILE
+
+getch();
+return 0;
+
+}//int main
