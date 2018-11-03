@@ -1,5 +1,5 @@
 # MateDiscreta
-Codigo Fuente del Proyecto Final
+Codigo Fuente del Proyecto Final en C++, IDE Dev-C++, Borland
 
 # Integrantes
 *  Rodrigo Humberto Lemus Salvador   -   0900-18-17597
